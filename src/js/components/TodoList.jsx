@@ -6,7 +6,7 @@ function TodoList() {
 
   
   const obtenerTareas = () => {
-    fetch("https://playground.4geeks.com/todo/users/Carolina")
+    fetch("https://playground.4geeks.com/todo/Carolina")
       .then(response => response.json())
       .then(data => {
         setTareas(data.todos || []);
@@ -28,7 +28,7 @@ function TodoList() {
         is_done: false
       };
 
-      fetch("https://playground.4geeks.com/todo/users/Carolina/todos", {
+      fetch("https://playground.4geeks.com/todo/todos/Carolina", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -46,7 +46,7 @@ function TodoList() {
 
   
   const eliminarTarea = (id) => {
-    fetch("https://playground.4geeks.com/todo/users/Carolina/todos/", {
+    fetch("https://playground.4geeks.com/todo/todos/" + id, {
       method: "DELETE"
     })
     .then(() => obtenerTareas())
