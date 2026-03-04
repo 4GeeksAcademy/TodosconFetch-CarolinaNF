@@ -6,7 +6,7 @@ function TodoList() {
 
   
   const obtenerTareas = () => {
-    fetch("https://playground.4geeks.com/todo/Carolina")
+    fetch("https://playground.4geeks.com/todo/users/Carolina")
       .then(response => response.json())
       .then(data => {
         setTareas(data.todos || []);
