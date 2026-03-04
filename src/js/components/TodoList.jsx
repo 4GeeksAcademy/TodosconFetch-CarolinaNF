@@ -46,7 +46,7 @@ function TodoList() {
 
   
   const eliminarTarea = (id) => {
-    fetch("https://playground.4geeks.com/todo/users/Carolina/todos/" + id, {
+    fetch("https://playground.4geeks.com/todo/users/Carolina/todos/", {
       method: "DELETE"
     })
     .then(() => obtenerTareas())
